@@ -1,0 +1,25 @@
+body{
+    background: linear-gradient(145deg, #1354d6 0%, #fa72ff 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5e0856;
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cv-card {
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 100px;
+    box-shadow: 0px 0px 10px rgb(237, 245, 202);
+    padding: 2.5rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+    gap: 40px;
+    align-items: start;
+}
