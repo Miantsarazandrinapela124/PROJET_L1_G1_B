@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000dc;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-container {
+    /* width: 80%; */
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    background-color: #ffe1e1;
+    padding: 18px;
+    border-radius: 32px;
+}
+
+.body-container .profil-container {
+    background: linear-gradient(to right, #313131, #f3eaeafa);
+    padding-top: 16px;
+    padding-bottom:16px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    border-top-left-radius: 2000px;
+    border-top-right-radius: 2000px;
+}
+
+.body-container .profil-container .profil-photo img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.body-container .profil-container .profil-content{
+    overflow: hidden;
+    width: 200px;
+}
+
+.body-container .profil-container .profil-content .title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #d4d3db;
+    background-color: #3b728bdc;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.body-container .profil-container .profil-content ul {
+    padding: 8px 16px 0px;
+}
+
+.body-container .profil-container .profil-content p {
+    font-size: 16px;
+    padding: 16px;
+    padding-top: 8px;
+    padding-bottom: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #4cbb64;
+}
+
+
+
+/* INFORMATION DU PROFIL */
+.body-container .profil-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 400px;
+}
+
+.body-container .profil-info .user-information .name {
+    font-size: 30px;
+    /* margin-top: 12px; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    color: #012649;
+}
+
+.body-container .profil-info .user-information .profession {
+    font-size: 26px;
+    color: #011447;
+}
+table {
+  border-collapse: collapse; /* Fusionne les bordures adjacentes */
+  width: 100%;
+}
+
+th, td {
+  border: 2px solid black;   /* Ligne de 1px, continue, noire */
+  padding: 8px;      
+}
+.body-container .profil-container{
+    margin: 5px;
+}
+
+
+
+.lien{
+ <i class="material-icons">attachment</i>
+}
+.body-container .user-experience .user-experience{
+    font-size: 30px;
+    /* margin-top: 12px; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    color: #010e1a;
+}
