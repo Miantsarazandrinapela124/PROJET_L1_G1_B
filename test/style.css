@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e6f0f2;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+/* ===== GAUCHE ===== */
+.left {
+    width: 35%;
+    background: linear-gradient(180deg, #203d44, #24545e);
+    color: rgb(255, 243, 243);
+    padding: 30px;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    border: 5px solid white;
+    object-fit: cover;
+}
+
+.left h2 {
+    margin-top: 30px;
+    font-size: 18px;
+    border-bottom: 2px solid rgba(253, 251, 251, 0.5);
+    padding-bottom: 5px;
+}
+
+.bar {
+    background: rgba(56, 52, 52, 0.3);
+    height: 8px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: rgb(145, 142, 142);
+}
+
+/* ===== DROITE ===== */
+.right {
+    width: 65%;
+    background: rgb(221, 221, 221);
+    padding: 40px;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+}
+
+.header h1 {
+    margin: 0;
+    color: #2c8091;
+}
+
+.header h3 {
+    margin-top: 5px;
+    color: rgb(95, 94, 94);
+}
+
+section {
+    margin-top: 30px;
+}
+
+section h2 {
+    color: #316a75;
+    border-bottom: 2px solid #1f899e;
+    padding-bottom: 5px;
+}
