@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Body principal CV */
+.cv-container {
+    width: 100%;
+    max-width: 850px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- COLONNE GAUCHE --- */
+.left-column {
+    width: 35%;
+    background-color: #ffffff;
+    padding: 40px 30px;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 40px auto;
+}
+
+.left-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section {
+    margin-bottom: 35px;
+}
+
+.contact-list {
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list i {
+    width: 25px;
+    color: #b0c4de;
+    font-size: 1.1rem;
+}
+
+.profil-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+/* Barres de progression langues */
+.lang-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.lang-item span {
+    width: 35%;
+}
+
+.progress-bar-bg {
+    width: 60%;
+    height: 8px;
+    background-color: #e0e6ed;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar.fill {
+    height: 100%;
+    background-color: #b0c4de;
+    border-radius: 10px;
+}
+
+/* Compétences */
+.skills-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Centres d'intérêt */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    text-align: center;
+}
+
+.hobbies-grid i {
+    font-size: 2rem;
+    color: #333;
+}
+
+
+/* --- COLONNE DROITE --- */
+.right-column {
+    width: 65%;
+    background-color: #e3ebf4; /* Bleu clair */
+    padding: 40px 50px;
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.header h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-right {
+    margin-bottom: 40px;
+}
+
+.section-header {
+    background-color: #ffffff;
+    padding: 8px 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    display: block;
+    width: 100%;
+}
+
+.experience-item {
+    margin-bottom: 25px;
+}
+
+.experience-item h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.meta-info {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.desc {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+}

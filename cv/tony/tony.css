@@ -1,115 +1,111 @@
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    box-sizing: border-box;
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-color: #000000dc;
-    padding: 20px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body{
+    background:#2b2c2c;
+    padding:30px;
 }
 
-.body-container {
-    /* width: 80%; */
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    background-color: #ada4a4;
-    padding: 18px;
-    border-radius: 32px;
+/* CONTAINER PRINCIPAL */
+.container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr; /* 3 colonnes */
+    gap:20px;
 }
 
-.body-container .profil-container {
-    background: linear-gradient(to right, #6fd0f7, #374f53);
-    padding-top: 16px;
-    padding-bottom:16px;
-    width: 230px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-
-    border-top-left-radius: 2000px;
-    border-top-right-radius: 2000px;
+/* BLOCS */
+.left, .center, .right{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
-.body-container .profil-container .profil-photo img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
+/* CENTRE (photo + infos) */
+.center{
+    background:#1e293b;
+    color:white;
+    text-align:center;
 }
 
-.body-container .profil-container .profil-content{
-    overflow: hidden;
-    width: 200px;
+.center a{
+    color:#38bdf8;
+    text-decoration:none;
 }
 
-.body-container .profil-container .profil-content .title {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #050000;
-    background-color: #a57153;
-    text-align: center;
-    font-size: 18px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+/* PHOTO */
+.photo img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid white;
+    margin-bottom:10px;
 }
 
-.body-container .profil-container .profil-content ul {
-    padding: 8px 16px 0px;
+/* TITRES */
+h1{
+    margin-bottom:10px;
 }
 
-.body-container .profil-container .profil-content p {
-    font-size: 16px;
-    padding: 16px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #0f0f0f;
-}
-.body-container .profil-container .profil-content button{
-    font-size: 25px;
-    padding: 15px;
-    padding-top: 10px;
-    padding-bottom: 0;
-    font-family: 'Times New Roman', Times, serif;
+h2{
+    margin-top:10px;
+    margin-bottom:5px;
 }
 
-
-/* INFORMATION DU PROFIL */
-.body-container .profil-info {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 400px;
+h3{
+    margin-top:15px;
+    margin-bottom:5px;
 }
 
-.body-container .profil-info .user-information .name {
-    font-size: 30px;
-    /* margin-top: 12px; */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 900;
-    color: #012649;
+/* LISTES */
+ul{
+    padding-left:18px;
+    margin-top:5px;
 }
 
-.body-container .profil-info .user-information .profession {
-    font-size: 26px;
-    color: #011447;
-}
-table {
-  border-collapse: collapse; /* Fusionne les bordures adjacentes */
-  width: 100%;
+li{
+    margin-bottom:5px;
 }
 
-th, td {
-  border: 2px solid black;   /* Ligne de 1px, continue, noire */
-  padding: 8px;      
+/* TABLE */
+table{
+    width:100%;
+    margin-top:10px;
+    border-collapse:collapse;
 }
-.body-container .profil-container{
-    margin: 5px;
+
+td{
+    border-bottom:1px solid #ddd;
+    padding:8px;
+    text-align:center;
 }
+
+tr:first-child{
+    background:#1e293b;
+    color:white;
+    font-weight:bold;
+}
+
+/* HR */
+hr{
+    margin:10px 0;
+    border:none;
+    height:1px;
+    background:#ccc;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+    .container{
+        grid-template-columns:1fr; /* 1 colonne sur mobile */
+    }
+}
+
