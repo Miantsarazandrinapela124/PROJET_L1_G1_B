@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | TIAVINARIMANGA Tsiaronavela</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #c0d9e8 0%, #d9e2e9 100%);
+            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+            padding: 2rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        /* carte principale avec effet "pop" */
+        .cv-card-alt {
+            max-width: 1050px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 40px 40px 30px 30px;
+            box-shadow: 0 30px 50px rgba(185, 96, 181, 0.25);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.2s ease;
+        }
+
+        /* bandeau supérieur avec dégradé et photo simulée */
+        .top-banner {
+            background: linear-gradient(135deg, #b8509e 0%, #6951d3 100%);
+            padding: 2rem 3rem 1.8rem 3rem;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 5px solid #facc15;
+        }
+
+        .name-title h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 #0a1e2b;
+        }
+
+        .name-title .subhead {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.95;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .subhead span {
+            background: #facc15;
+            color: #1a2e3f;
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .avatar-circle {
+            width: 100px;
+            height: 100px;
+            background: #d6e6f5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 500;
+            color: #1c4e70;
+            border: 4px solid #facc15;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* cartes d'informations personnelles (horizontal) */
+        .personal-highlight {
+            background: #f0f6fd;
+            padding: 1rem 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.2rem;
+            font-size: 1rem;
+            border-bottom: 2px dashed #9dbed5;
+        }
+
+        .perso-chip {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            padding: 0.4rem 1.3rem;
+            border-radius: 60px;
+            box-shadow: 0 3px 8px rgba(0, 30, 50, 0.1);
+        }
+
+        .perso-chip .emoji-big {
+            font-size: 1.4rem;
+        }
+
+        .perso-chip .text {
+            font-weight: 500;
+            color: #0b374f;
+        }
+
+        /* structure 2 colonnes avec légère inégalité */
+        .alt-main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .sidebar-alt {
+            flex: 1 1 30%;
+            background: #f2f7fc;
+            padding: 2rem 2rem 2rem 2.2rem;
+            border-right: 2px solid #d0e2f0;
+        }
+
+        .content-alt {
+            flex: 1 1 70%;
+            background: white;
+            padding: 2rem 2.5rem;
+        }
+
+        /* titre de rubrique décoré */
+        .section-caption {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #113946;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-left: 7px solid #facc15;
+            padding-left: 1rem;
+        }
+
+        .section-caption i {
+            font-style: normal;
+            font-size: 1.7rem;
+        }
+
+        /* timeline version 2 (pastilles) */
+        .alt-timeline {
+            margin-bottom: 2rem;
+        }
+
+        .alt-item {
+            margin-bottom: 1.4rem;
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 3px solid #facc15;
+        }
+
+        .alt-date {
+            font-weight: 600;
+            background: #dcebf5;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #11537a;
+            margin-bottom: 0.25rem;
+        }
+
+        .alt-title {
+            font-weight: 700;
+            color: #0e2f41;
+            font-size: 1.05rem;
+        }
+
+        .alt-sub {
+            color: #426f8b;
+            font-size: 0.9rem;
+            margin-top: 0.1rem;
+        }
+
+        /* grille compétences technique */
+        .skills-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.2rem 0 2rem 0;
+        }
+
+        .skill-badge {
+            background: white;
+            border: 2px solid #2a6c9e;
+            color: #1c4c70;
+            padding: 0.5rem 1.5rem;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .skill-badge.github {
+            background: #1e2b37;
+            border-color: #facc15;
+            color: white;
+        }
+
+        /* softskills en grille plus design */
+        .soft-alt {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0 2rem;
+        }
+
+        .soft-pill {
+            background: #e3eef8;
+            color: #0b4b6b;
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 500;
+            border: 1px solid #aac6dd;
+            flex: 0 1 auto;
+        }
+
+        /* langues : petits panneaux */
+        .lang-panel {
+            background: white;
+            border-radius: 24px;
+            padding: 1.3rem;
+            box-shadow: 0 5px 12px rgba(0, 20, 30, 0.08);
+            margin-top: 1rem;
+        }
+
+        .lang-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #c3d9ec;
+        }
+
+        .lang-row:last-child {
+            border-bottom: none;
+        }
+
+        .lang-name {
+            font-weight: 700;
+            color: #1a4359;
+        }
+
+        .lang-level {
+            background: #edf4fa;
+            padding: 0.2rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #124f72;
+        }
+
+        /* loisirs icônes */
+        .hobby-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .hobby-item {
+            background: #fef7e7;
+            padding: 0.5rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            border: 2px solid #facc15;
+            color: #2c4355;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* diplômes dans la partie droite avec puces */
+        .diplome-card {
+            background: #f6faff;
+            border-radius: 24px;
+            padding: 1.2rem 1.8rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid #d1e1f0;
+            transition: 0.1s;
+        }
+
+        .diplome-card:hover {
+            background: #edf5ff;
+        }
+
+        .diplome-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.3rem;
+        }
+
+        .diplome-year {
+            background: #facc15;
+            color: #0c2b3c;
+            font-weight: 700;
+            padding: 0.2rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+        }
+
+        .diplome-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #0a384f;
+        }
+
+        .diplome-mention {
+            color: #2b6f98;
+            font-weight: 500;
+            margin-top: 0.2rem;
+        }
+
+        .extra-quote {
+            background: #fef2d6;
+            border-radius: 30px;
+            padding: 1.3rem 2rem;
+            margin-top: 2rem;
+            font-weight: 500;
+            border-left: 8px solid #1b4f6e;
+            color: #1f3f55;
+        }
+
+        hr.sep {
+            margin: 1.8rem 0;
+            border: 0;
+            height: 2px;
+            background: linear-gradient(to right, #facc15, #c0d4e6, white);
+        }
+
+        /* responsive */
+        @media (max-width: 750px) {
+            .top-banner { flex-direction: column; align-items: start; gap: 1rem; }
+            .avatar-circle { align-self: flex-start; }
+            .personal-highlight { flex-direction: column; gap: 0.8rem; }
+            .alt-main { flex-direction: column; }
+            .sidebar-alt { border-right: 0; border-bottom: 2px solid #c4d7e8; }
+        }
+
+        /* pied de page */
+        .footer-alt {
+            background: #1b3b4f;
+            color: #e3f0fa;
+            padding: 1rem 2.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 3px solid #facc15;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-card-alt">
+        <!-- Bandeau supérieur avec nom et initiales (avatar) -->
+        <div class="top-banner">
+            <div class="name-title">
+                <h1>TIAVINARIMANGA<br><span style="font-weight: 300; font-size: 1.8rem;">Tsiaronavela Falimanjaka</span></h1>
+                <div class="subhead">
+                    <span>Licence 1 en Informatique</span> ✦ Fianarantsoa
+                </div>
+            </div>
+            <div class="avatar-circle">
+                    <img src="tsiaro.jpg" alt="Sary profil" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
+            </div>
+        </div>
+
+        <!-- Coordonnées en chips colorés -->
+        <div class="personal-highlight">
+            <div class="perso-chip"><span class="emoji-big">📍</span><span class="text">329AIV Antanifotsy4, Fianarantsoa, Madagascar</span></div>
+            <div class="perso-chip"><span class="emoji-big">📞</span><span class="text">034 66 28 316</span></div>
+            <div class="perso-chip"><span class="emoji-big">✉️</span><span class="text">tsiaronavelafalimanjaka@gmail.com</span></div>
+        
+         <div class="profil-content">
+             <a href="../index/Index.html">
+                    <button style="width: 100%;background-color: rgb(218, 132, 132);">Page d'acceuil🏠</button>
+             </a>
+        </div></div>
+
+        <!-- Deux colonnes avec contenu réorganisé -->
+        <div class="alt-main">
+            <!-- COLONNE GAUCHE (plus étroite) : formation académique + compétences + langues/loisirs -->
+            <div class="sidebar-alt">
+                <!-- Formation académique (présentée de façon compacte) -->
+                <div>
+                    <div class="section-caption"><i>📚</i> Formation</div>
+                    <div class="alt-timeline">
+                        <div class="alt-item">
+                            <span class="alt-date">2026</span>
+                            <div class="alt-title">Première Année · Licence informatique</div>
+                            <div class="alt-sub">Université de Fianarantsoa</div>
+                        </div>
+                        <div class="alt-item">
+                            <span class="alt-date">2024-2025</span>
+                            <div class="alt-title">Terminale (Lycéenne)</div>
+                            <div class="alt-sub">Baccalauréat série scientifique</div>
+                        </div>
+                        <div class="alt-item">
+                            <span class="alt-date">2021-2022</span>
+                            <div class="alt-title">BEPC</div>
+                            <div class="alt-sub">Brevet d'Études Premier Cycle</div>
+                        </div>
+                        <div class="alt-item">
+                            <span class="alt-date">2016-2017</span>
+                            <div class="alt-title">CEPE</div>
+                            <div class="alt-sub">Certificat École Primaire</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Centres de compétences (programmation) -->
+                <div style="margin-top: 2rem;">
+                    <div class="section-caption"><i>💻</i> Programmation</div>
+                    <div class="skills-cloud">
+                        <span class="skill-badge">HTML</span>
+                        <span class="skill-badge">CSS</span>
+                        <span class="skill-badge github">GITHUB</span>
+                    </div>
+                </div>
+
+                <!-- Qualités (savoir-être) -->
+                <div style="margin-top: 1.5rem;">
+                    <div class="section-caption"><i>✨</i> Savoir-être</div>
+                    <div class="soft-alt">
+                        <span class="soft-pill">Rigoureuse</span>
+                        <span class="soft-pill">Souriante</span>
+                        <span class="soft-pill">Autonome</span>
+                        <span class="soft-pill">Travail d'équipe</span>
+                        <span class="soft-pill">Créative</span>
+                        <span class="soft-pill">Organisatrice</span>
+                    </div>
+                </div>
+
+                <!-- Langues + Loisirs (regroupés dans un bloc) -->
+                <div style="margin-top: 2rem;">
+                    <div class="section-caption"><i>🗣️</i> Langues</div>
+                    <div class="lang-panel">
+                        <div class="lang-row">
+                            <span class="lang-name">Malagasy</span>
+                            <span class="lang-level">Maternelle (parler, lu, écrit)</span>
+                        </div>
+                        <div class="lang-row">
+                            <span class="lang-name">Français</span>
+                            <span class="lang-level">Bien (parler, lu, écrit)</span>
+                        </div>
+                        <div class="lang-row">
+                            <span class="lang-name">Anglais</span>
+                            <span class="lang-level">Assez-bien</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1.8rem;">
+                        <div class="section-caption" style="margin-bottom: 0.8rem;"><i>🎯</i> Loisirs</div>
+                        <div class="hobby-block">
+                            <span class="hobby-item">🎤 Chater</span>
+                            <span class="hobby-item">💃 Danser</span>
+                            <span class="hobby-item">📖 Lire</span>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- fin sidebar-alt -->
+
+            <!-- COLONNE DROITE (plus large) : diplômes détaillés + compétences complémentaires + citation -->
+            <div class="content-alt">
+                <!-- Diplômes obtenus (avec carte détaillée) -->
+                <div class="section-caption"><i>🏅</i> Diplômes obtenus</div>
+                
+                <div class="diplome-card">
+                    <div class="diplome-meta">
+                        <span class="diplome-year">2024-2025</span>
+                        <span class="diplome-name">Baccalauréat scientifique</span>
+                    </div>
+                    <div class="diplome-mention">Mention Bien</div>
+                </div>
+
+                <div class="diplome-card">
+                    <div class="diplome-meta">
+                        <span class="diplome-year">2021-2022</span>
+                        <span class="diplome-name">BEPC</span>
+                    </div>
+                    <div class="diplome-mention">Brevet d'Études Premier Cycle</div>
+                </div>
+
+                <div class="diplome-card">
+                    <div class="diplome-meta">
+                        <span class="diplome-year">2016-2017</span>
+                        <span class="diplome-name">CEPE</span>
+                    </div>
+                    <div class="diplome-mention">Certificat d'Études Primaires Élémentaires</div>
+                </div>
+
+                <!-- une séparation décorative -->
+                <hr class="sep">
+
+                <!-- Bloc "complément" avec mention des compétences non techniques déjà listées à gauche, mais on peut ajouter une phrase -->
+                <div style="background: #e7f0f9; border-radius: 40px; padding: 1.2rem 2rem; margin: 1rem 0;">
+                    <p style="font-weight: 600; color: #153e54;">⚡ Atouts complémentaires</p>
+                    <p style="color: #1e4d69;">Grande capacité d'organisation, rigueur et aisance relationnelle. Souriante et créative, j'apprécie le travail en équipe et les défis techniques.</p>
+                </div>
+
+                <!-- Informations additionnelles : on peut rappeler la programmation de façon plus large -->
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+                    <div style="flex: 1;">
+                        <div style="font-weight: 700; color: #1c5779;">🛠️ Environnement technique</div>
+                        <ul style="margin-top: 0.5rem; list-style-type: none; color: #234f6b;">
+                            <li>✔ HTML5 / CSS3 (création de CV, pages simples)</li>
+                            <li>✔ Git & GitHub – versions et dépôts</li>
+                            <li>✔ VS Code, familiarité avec l’écosystème web</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 700; color: #1c5779;">🌍 Centres d'intérêt</div>
+                        <ul style="margin-top: 0.5rem; list-style-type: none; color: #234f6b;">
+                            <li>📚 Lecture (romans, essais)</li>
+                            <li>🎵 Chant et danse (loisirs créatifs)</li>
+                            <li>🤝 Projets collaboratifs & bénévolat</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- petite signature / citation -->
+                <div class="extra-quote">
+                    « Je suis motivée, curieuse et prête à apprendre pour évoluer dans le domaine du numérique. »
+                </div>
+            </div> <!-- fin content-alt -->
+        </div> <!-- fin alt-main -->
+
+        <!-- pied de page minimaliste mais présent -->
+        <div class="footer-alt">
+            📧 tsiaronavelafalimanjaka@gmail.com  |  📞 034 66 28 316  |  Fianarantsoa — 2026
+        
+         </div>
+           </div>
+        
+    </div>
+    
+</body>
+</html>

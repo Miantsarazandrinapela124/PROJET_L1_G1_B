@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV- Miotisoa</title>
+ 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        align-items: center;
+        justify-content: center;
+    }
+      .body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background-color:"";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.5;
+            color: #f8f9fa;
+            scroll-behavior: smooth;
+          margin-left : 250px;
+        }
+ .cv {
+        box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.3);
+    }
+    .cv {
+            max-width: 850px;
+            width: 100%;
+            background: white;
+            padding: 35px 40px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-left: 250px
+        }
+       .header {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 30px;
+            margin-bottom: 15px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .col-left, .col-right {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #f8f9fa;
+            margin: 25px 0 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-left: 5px solid #f8f9fa;
+            padding-left: 15px;
+        }
+  .section-title i {
+            color: #2d6a4f;
+            font-size: 1.3rem;
+        }
+   .section-title:first-of-type {
+            margin-top: 0;
+   }
+    .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #334155;
+        }
+      .contact-item i {
+            width: 22px;
+            color: #2d6a4f;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .address {
+            margin-top: 12px;
+        }
+
+        .address div {
+            margin-bottom: 3px;
+        }
+
+      
+        .photo-frame {
+            width: 95px
+            height: 95px
+            border: 1px solid #333;
+            display: flex;
+            object-fit: cover;
+            border-radius: 50%
+        }
+
+      
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid #222;
+            padding-bottom: 5px;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .exp-item, .formation-item {
+            margin-bottom: 12px;
+        }
+
+        .exp-item strong, .formation-item strong {
+            font-weight: 600;
+        }
+
+      
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid #222;
+            padding: 8px 6px;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        td:first-child {
+            font-weight: bold;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .maternelle {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .certify {
+            margin-top: 30px;
+            font-style: normal;
+        }
+
+        .date {
+            text-align: right;
+            margin-top: 5px;
+            font-weight: normal;
+        }
+       .nom {
+            text-align: right;
+            margin-top: 5px;
+            font-weight: normal;
+}
+        .divers p {
+            margin-bottom: 5px;
+            
+        }
+    body {
+            background: #b7a9a9; 
+        }
+        .cv {
+            border: 1px solid #a0522d; 
+        }
+        h1 {
+            color: #5d3a1a;
+            text-shadow: 1px 1px 2px #d3c5b0;
+            text-align: center
+        }
+        h2 {
+            color: #8b4513; 
+            border-bottom-color: #a9a9a9; 
+        }
+        .header {
+            background-color: #f5f0e6; 
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+    img {
+        width: 95px;
+        height: 95px
+        object-fit: cover;
+        border-radius:50%
+    }
+  .header {
+    gap: 8px; 
+}
+.photo-frame {
+            margin-right: 3; 
+            align-self: start; 
+            border-color: #8b4513;
+            background-color: #d3c5b0;
+        }
+strong {
+         color: #6b4226; 
+        }
+table th {
+            background-color: #d2b48c; 
+            color: #2d2d2d;
+            border-color: #6b4f3a;
+        }
+table td {
+            border-color: #a9a9a9;
+        }
+table tr:nth-child(even) {
+            background-color: #f0f0f0; 
+        }
+.certify, .date, .nom {
+            color: #4a3c31;
+        }
+.date, .nom {
+            border-top: 2px solid #c0a080; 
+            padding-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1> CURRICULUM VITAE </h1>
+  
+    <div class="cv">
+      
+        <div class="header">
+            <div class="info">
+                <div class="row">
+                    <div class="col-left">
+                        <div><strong>Nom:</strong>RANDRIAMAROSON </div>
+                        <div><strong>Prénoms:</strong>Tambiniavo Miotisoa</div>
+                        <div><strong>Née le:</strong> 12 Mai 2007 à Maternité de Fianarantsoa</div>
+                        <div><strong>Situation amoureuse:</strong>Célibataire</div>
+                        <div><strong> Nationalité:</strong>Malagasy</div>
+                        <div><strong>Adresse :</strong> Lot 158 AE/3602 Ankofafa ambony, Fianarantsoa</div>
+                        <div><strong>Téléphone :</strong> 0384009564</div>
+                        <div class="profil-content">
+             <a href="../index/Index.html">
+                    <button style="width: 100%;background-color: rgb(87, 51, 5);">Page d'acceuil🏠</button>
+             </a>
+        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-frame">
+                <img src="mioty.jpg" align="center">
+            </div>
+        </div>
+  <h2>FORMATIONS ET DIPLÔMES</h2>
+        <div class="formation-item">
+            <strong>2022 :</strong> Obtention de diplôme du lauréat de BEPC 2022 au lycée Catholique Fo Masin'i Jesoa Talatamaty Fianarantsoa.
+        </div>
+        <div class="formation-item">
+            <strong>2023 et 2024:</strong> Classe de seconde et première au sein du lycée Catholique Fo Masin'i Jesoa Talatamaty Fianarantsoa.
+        </div>
+        <div class="formation-item">
+            <strong>2025 :</strong> Classe de terminale au lycée Catholique Fo Masin’i Jesoa Talatamaty Fianarantsoa. Obtention du diplôme de baccalauréat série C, avec mention BIEN.
+        </div>
+        
+                  <strong>2026:</strong> Étudiante en première année de licence en informatique à l'université École de Management et d'Innovation Technologique, Fianarantsoa.
+      <h2>CONNAISSANCES LINGUISTIQUES</h2>
+        <table>
+            <tr>
+                <th>&nbsp;</th>
+                <th colspan="2">Compréhension</th>
+                <th colspan="2">Expression</th>
+            </tr>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Orale</th>
+                <th>Écrite</th>
+                <th>Orale</th>
+                <th>Écrite</th>
+            </tr>
+            <tr>
+                <td>Français</td>
+                <td>Moyenne</td>
+                <td>Bien</td>
+                <td>Bien</td>
+                <td>Bien</td>
+            </tr>
+            <tr>
+                <td>Anglais</td>
+                <td>Moyenne</td>
+                <td>Moyenne</td>
+                <td>Moyenne</td>
+                <td>Moyenne</td>
+            </tr>
+            <tr>
+                <td>Espagnol</td>
+                <td>Assez-bien</td>
+                <td>Moyenne</td>
+                <td>Assez-bien</td>
+                <td>Moyenne</td>
+            </tr>
+            <tr>
+                <td>Malagasy</td>
+                <td class="maternelle">Langue maternelle</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
+     
+        <h2>COMPÉTENCE EN INFORMATIQUE</h2>
+        <p><strong>Bureautique :</strong> Microsoft Word –  Excel – Internet - Powerpoint</p>
+
+       
+        <h2>DIVERS</h2>
+        <div class="divers">
+            <p><strong>Sports :</strong> Basketball</p>
+            <p><strong>Loisirs :</strong> Chanter, Danser, Couture</p>
+        </div>
+
+      
+        <p class="certify">Je certifie sur l’honneur, sincère et véritable, l’exactitude des renseignements me concernant, cités ci-dessus.</p>
+        <p class="date">Fianarantsoa le, 15 Février 2026</p>
+        <p class="nom"> RANDRIAMAROSONTambiniavo Miotisoa
+             </div>
+            
+        </p>
+        
+    </div>
+</body>
+</html>
+
+
+

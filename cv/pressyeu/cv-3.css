@@ -1,0 +1,66 @@
+body {
+    font-family: helvetica;
+    background-color: whitesmoke;
+}
+/*colorer en bleu et rouge*/
+.red {
+    color: red;
+}
+.blue{
+    color: rgb(17, 87, 179);
+    font-size: 1.3rem;
+    display: block;
+    background-color: rgb(3, 9, 34);
+    padding: 9px;
+    width: 100%;
+    margin: 0;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+.blueleft {
+    color: rgb(17, 87, 179);
+    font-size: 1.3rem;
+    display: block;
+    background-color: rgb(3, 9, 34);
+    padding: 9px;
+    width: 80%;
+    margin-left: -20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+/*diviser en deux le texte*/
+.container {
+    display: flex;
+    gap: 50px;
+}
+.left {
+    flex: 1;
+    padding: 10px;
+}
+.right {
+    flex: 1;
+    padding: 10px;
+}
+/*image et texte cote a cote*/
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+#nom {
+    font-size: 2rem;
+    color: rgb(34, 7, 155);
+}
+#etudiant {
+    font-size: 1.5rem;
+}
+.profil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}

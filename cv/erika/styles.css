@@ -1,0 +1,78 @@
+body{
+    font-family: Arial;
+    margin: 0;
+    background: linear-gradient(120deg,hwb(51 13% 56% / 0.021),#7ba7af);
+}
+
+/*HEADER*/
+header{
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+/*CARD*/
+.card{
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0,0.3);
+    animation-duration: 1.5s;
+}
+
+/*PHOTO*/
+.photo{
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/*TABLE*/
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th,td{
+    border: 1px solid#ddd;
+    padding: 1px;
+}
+th{
+    background: #783adb;
+    color: white;
+}
+tr:hover{
+    background: #f1f1f1;
+}
+
+/*FOOTER*/
+footer{
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/*ANIMATION*/
+.fade-in{
+    animation: 2s;
+}
+.slide-left{
+    animation: 1.5s;
+}
+.slide-right{
+    animation: 1.5s;
+}
+
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes slideLeft{
+    from{transform: translateX(-100px);opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}
+}
+@keyframes slideRight{
+    from{transform: translateX(100px);opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}
+}
