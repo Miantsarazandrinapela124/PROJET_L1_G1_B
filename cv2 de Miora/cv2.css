@@ -1,0 +1,135 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* STYLE GENERAL */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+}
+
+/* HEADER ORIGINAL */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+header h1 span {
+    color: #ffd700;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    position: relative;
+}
+
+/* PRESENTATION */
+.about p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* COMPETENCES */
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill p {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.progress {
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 15px;
+    border-radius: 20px;
+    animation: load 2s ease-in-out;
+}
+
+.html {
+    width: 90%;
+    background: #ff4b2b;
+}
+
+.css {
+    width: 80%;
+    background: #2575fc;
+}
+
+.js {
+    width: 70%;
+    background: #f7df1e;
+}
+
+/* ANIMATION */
+@keyframes load {
+    from {
+        width: 0;
+    }
+}
+
+/* PROJETS */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
